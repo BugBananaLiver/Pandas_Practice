@@ -1,0 +1,34 @@
+# Run the code below to load a real dataset from the web. Then complete the prompts using Pandas indexing tools.
+import pandas as pd
+
+# Load Titanic dataset directly from GitHub
+url = 'https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv'
+df = pd.read_csv(url)
+
+# Preview the data
+# print(df.head())
+# print(df.loc[12])
+# print(df.iloc[0:5, 0:3])
+
+# 3. Use .loc to get all passengers in 1st class who are female
+# print(df.loc[(df['Pclass'] == 1) & (df['Sex'] == 'female')])
+# # 4. Use .iloc to get the age of the 10th passenger (by position)
+# print(df.iloc[10]['Age'])
+# 5. Use .loc to get the 'Fare' and 'Survived' values for passengers with index 100 to 105
+# print(df.loc[100:105,["Fare", "Survived"]])
+# 1. Summarize the numeric columns
+# print(df.describe())
+# 2. Use .value_counts() to see counts for embarkation ports
+# print(df.value_counts("Embarked"))
+# 3. Use .value_counts() to count passenger classes
+# print(df.value_counts("Pclass"))
+# 4. Show the average (mean) age of passengers
+# print(df["Age"].mean())
+# 5. Show the maximum fare paid
+# print(df["Fare"].max())
+
+# # 6. Show how many unique names are in the dataset
+#print(df["Name"].nunique())
+
+# # 7. Show counts for values in the 'Sex' column
+# print(df["Sex"].nunique())
